@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  transition: all 500ms ease;
 }
 
 body {
@@ -17,5 +18,20 @@ body {
 
   @media(max-width: 922px) {
     padding: 0 20px;
+  }
+}
+
+.general-button {
+  padding: 12px 40px;
+  color: $main-color;
+  background-color: transparent;
+  border: 2px solid $main-color;
+  transition: all 500ms ease;
+  font-size: 15px;
+  font-weight: 500;
+
+  &:hover {
+    background-color: $main-color;
+    color: white;
   }
 }

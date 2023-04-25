@@ -1,0 +1,36 @@
+@import "../../../../vendors/mixins";
+@import "../../../../vendors/variables";
+
+.hero {
+    .hero-content {
+        height: 524px;
+        background-image: url(https://websitedemos.net/furniture-store-04/wp-content/uploads/sites/155/2020/02/sofa-bg-banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom right;
+        padding: 80px 100px;
+
+        @media(max-width: 922px) {
+            height: 430px;
+        }
+
+        @media(max-width: 767px) {
+            padding: 70px 0 70px 40px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $main-color;
+
+            @media(max-width: 922px) {
+                font-size: 40px;
+            }
+
+            @media(max-width: 544px) {
+                font-size: 32px;
+            }
+        }
+    }
+}
