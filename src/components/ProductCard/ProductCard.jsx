@@ -4,18 +4,18 @@ import "./productCard.scss";
 import { HiShoppingCart } from "react-icons/hi";
 import { FaEye } from "react-icons/fa";
 
-const ProductCard = () => {
-    const sale = true;
+const ProductCard = (props) => {
+    const { image, title, category, price, newPrice, sale } = props;
     return (
-        <div className="product-card d-flex flex-column col-12 col-md-4 col-lg-3">
+        <div className="product-card pb-5 d-flex flex-column col-12 col-md-4 col-lg-3">
             <div className="product-image mb-1">
-                <Link to="/"><img src="https://websitedemos.net/furniture-store-04/wp-content/uploads/sites/155/2018/01/wooden-rocking-chair-300x300.jpg" alt="product" /></Link>
+                <Link to="/"><img src={image} alt="product" /></Link>
             </div>
             <div className="product-info px-3 d-flex flex-column">
-                <span className='product-category'>Armchair</span>
-                <h3><Link to="/">Wooden Rocking Chair</Link ></h3>
+                <span className='product-category'>{category}</span>
+                <h3><Link to="/">{title}</Link ></h3>
                 <div className="product-prices d-flex">
-                    {sale ? (<><del className='product-price pe-2'>£169.00</del><span className='product-price'>£169.00</span></>) : (<span className='product-price'>£169.00</span>)}
+                    {sale ? (<><del className='product-price pe-2'>£{price}.00</del><span className='product-price'>£{newPrice}.00</span></>) : (<span className='product-price'>£{price}.00</span>)}
                 </div>
             </div>
             <div className="product-card-buttons d-flex flex-column">
