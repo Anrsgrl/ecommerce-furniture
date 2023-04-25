@@ -23,13 +23,8 @@
         }
 
         h2 {
-            font-size: 42px;
             font-weight: 500;
             color: $main-color;
-
-            @media(max-width: 922px) {
-                font-size: 30px;
-            }
         }
 
         h6 {

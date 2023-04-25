@@ -1,0 +1,33 @@
+@import "../../../../vendors/mixins";
+@import "../../../../vendors/variables";
+
+.sale-content {
+    background-color: #f0f0f0;
+    background-image: url(https://websitedemos.net/furniture-store-04/wp-content/uploads/sites/155/2021/12/sale-highlight-bg-banner.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 293px;
+    @include flexCenter;
+
+    @media(max-width: 767px) {
+        height: 234px;
+    }
+
+    .sale-title {
+        gap: 8px;
+        width: 80%;
+
+        @media(max-width: 767px) {
+            align-items: center;
+        }
+
+        h2 {
+            color: #a71052;
+        }
+
+        h3 {
+            color: $main-color;
+        }
+    }
+}
