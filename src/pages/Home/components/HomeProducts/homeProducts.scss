@@ -1,0 +1,28 @@
+@import "../../../../vendors/mixins";
+@import "../../../../vendors/variables";
+
+.home-products {
+    padding-top: 60px;
+
+    .divider-part {
+        margin: 20px 0 60px 0;
+
+        .divider {
+            width: 5%;
+            height: 2px;
+            background-color: $main-color;
+            margin: 0 auto;
+            border-radius: 3%;
+        }
+    }
+
+    h3 {
+        font-size: 30px;
+        line-height: 1.2em;
+        font-weight: 400;
+
+        @media(max-width: 922px) {
+            font-size: 22px;
+        }
+    }
+}
