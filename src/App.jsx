@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import Shop from "./pages/Shop/Shop";
 import Cart from "./pages/Cart/Cart";
 import NotFound from "./pages/NotFound/NotFound";
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (
