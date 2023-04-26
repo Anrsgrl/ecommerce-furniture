@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ProductCard from '../../../../components/ProductCard/ProductCard';
 import data from "../../../../data/data";
 import { FaFilter } from "react-icons/fa";
@@ -17,7 +17,6 @@ const ShopProducts = () => {
 
     }
 
-
     return (
         <div className="shop-products">
             <div className="filter-part d-flex  justify-content-between py-5">
@@ -34,12 +33,11 @@ const ShopProducts = () => {
                 {products.map((item) => (
                     <ProductCard
                         key={item.id}
-                        id={item.id}
                         image={item.image}
                         title={item.title}
                         category={item.category}
                         price={item.price}
-                        newPrice={item.newPrice}
+                        oldPrice={item.oldPrice}
                         sale={item.sale}
                     />
                 ))}

@@ -5,9 +5,9 @@ import { HiShoppingCart } from "react-icons/hi";
 import { FaEye } from "react-icons/fa";
 
 const ProductCard = (props) => {
-    const { image, title, category, price, newPrice, sale, id } = props;
+    const { image, title, category, price, oldPrice, sale } = props;
     return (
-        <div key={id} className="product-card pb-5 d-flex flex-column col-12 col-md-4 col-lg-3">
+        <div className="product-card pb-5 d-flex flex-column col-12 col-md-4 col-lg-3">
             <div className="product-image mb-1">
                 <Link to="/"><img src={image} alt="product" /></Link>
             </div>
@@ -15,7 +15,7 @@ const ProductCard = (props) => {
                 <span className='product-category'>{category}</span>
                 <h3><Link to="/">{title}</Link ></h3>
                 <div className="product-prices d-flex">
-                    {sale ? (<><del className='product-price pe-2'>£{price}.00</del><span className='product-price'>£{newPrice}.00</span></>) : (<span className='product-price'>£{price}.00</span>)}
+                    {sale ? (<><del className='product-price pe-2'>£{oldPrice}.00</del><span className='product-price'>£{price}.00</span></>) : (<span className='product-price'>£{price}.00</span>)}
                 </div>
             </div>
             <div className="product-card-buttons d-flex flex-column">
