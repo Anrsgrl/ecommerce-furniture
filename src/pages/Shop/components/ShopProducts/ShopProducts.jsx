@@ -1,9 +1,9 @@
 import React from 'react';
 import ProductCard from '../../../../components/ProductCard/ProductCard';
 import { FaFilter } from "react-icons/fa";
-import "./shopProducts.scss";
 import { useDispatch, useSelector } from 'react-redux';
 import { handleSort } from '../../../../store/features/filterSlice';
+import "./shopProducts.scss";
 
 const ShopProducts = () => {
     const products = useSelector((state) => state.products.products)

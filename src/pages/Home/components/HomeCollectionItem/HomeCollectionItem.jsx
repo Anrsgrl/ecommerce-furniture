@@ -1,8 +1,10 @@
 import React from 'react';
 import "./homeCollectionItem.scss";
+import { useNavigate } from 'react-router-dom';
 
 const HomeCollectionItem = (props) => {
     const { image, title, comment, reverse } = props;
+    const navigate = useNavigate();
     return (
         <div className="row pt-3 g-0" style={{ flexDirection: reverse ? 'row-reverse' : 'row' }}>
             <div className="col-12 col-md-4">
@@ -14,7 +16,7 @@ const HomeCollectionItem = (props) => {
                 <div className="title-content">
                     <h2>{title}</h2>
                     <h6 className='mt-3'>{comment}</h6>
-                    <button className='general-button mt-4'>View Collections</button>
+                    <button onClick={() => navigate("/shop")} className='general-button mt-4'>View Collections</button>
                 </div>
             </div>
         </div>
