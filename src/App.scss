@@ -1,4 +1,5 @@
 @import "./vendors/variables";
+@import "./vendors/mixins";
 
 * {
   box-sizing: border-box;
@@ -46,6 +47,10 @@ h3 {
     background-color: $main-color;
     color: white;
   }
+}
+
+.clean-button {
+  @include cleanButton;
 }
 
 .divider-part {

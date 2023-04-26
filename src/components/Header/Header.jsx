@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from "../../assets/images/logo.png";
 import "./header.scss";
 import { HiShoppingCart } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { handleCategory } from '../../store/features/filterSlice';
 
 const Header = () => {
     const [hamburger, setHamburger] = useState(true);
     const [nav, setNav] = useState(false);
     const cart = useSelector((state) => state.cart.cart);
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
     const getTotalQuantity = () => {
         let total = 0;
         cart.forEach((item) => {
@@ -25,6 +28,18 @@ const Header = () => {
         });
         return total;
     };
+    const changeCategory = (category) => {
+        dispatch(handleCategory(category));
+        navigate('/shop')
+    }
+    const closeHamburger = () => {
+        setNav(false);
+        setHamburger(true)
+    }
+    const openHamburger = () => {
+        setNav(true);
+        setHamburger(false)
+    }
     return (
         <header className='bg-white'>
             <div className="page-container">
@@ -34,10 +49,10 @@ const Header = () => {
                             <Link to="/"><img src={logo} alt="logo" /></Link>
                         </div>
                         <ul className='dekstop-nav list-unstyled m-0'>
-                            <li><NavLink to="/shop">All products</NavLink></li>
-                            <li><NavLink>Sofa</NavLink></li>
-                            <li><NavLink>Chair</NavLink></li>
-                            <li><NavLink>Table</NavLink></li>
+                            <li><button className='clean-button' onClick={() => { changeCategory("All") }}>All Products</button></li>
+                            <li><button className='clean-button' onClick={() => { changeCategory("Sofa") }}>Sofa</button></li>
+                            <li><button className='clean-button' onClick={() => { changeCategory("Chair") }}>Chair</button></li>
+                            <li><button className='clean-button' onClick={() => { changeCategory("Table") }}>Table</button></li>
                         </ul>
                     </div>
                     <div className="header-right">
@@ -47,16 +62,16 @@ const Header = () => {
                             <p className='cart-quantity'>{getTotalQuantity()}</p>
                         </div>
                         <div className="hamburger-menu">
-                            {hamburger ? (<button onClick={() => { setNav(true); setHamburger(false) }}><GiHamburgerMenu /></button>) : (<button onClick={() => { setNav(false); setHamburger(true) }}><IoCloseSharp /></button>)}
+                            {hamburger ? (<button onClick={() => { openHamburger() }}><GiHamburgerMenu /></button>) : (<button onClick={() => { closeHamburger() }}><IoCloseSharp /></button>)}
                         </div>
                     </div>
                 </div>
             </div>
             <ul className={nav ? 'mobile-nav open-nav  list-unstyled m-0' : 'mobile-nav list-unstyled m-0'}>
-                <li><NavLink>All products</NavLink></li>
-                <li><NavLink>Sofa</NavLink></li>
-                <li><NavLink>Chair</NavLink></li>
-                <li><NavLink>Table</NavLink></li>
+                <li><button className='clean-button' onClick={() => { changeCategory("All"); closeHamburger() }}>All Products</button></li>
+                <li><button className='clean-button' onClick={() => { changeCategory("Sofa"); closeHamburger() }}>Sofa</button></li>
+                <li><button className='clean-button' onClick={() => { changeCategory("Chair"); closeHamburger() }}>Chair</button></li>
+                <li><button className='clean-button' onClick={() => { changeCategory("Table"); closeHamburger() }}>Table</button></li>
             </ul>
         </header>
     )
