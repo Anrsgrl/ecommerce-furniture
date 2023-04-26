@@ -1,17 +1,18 @@
-import React from 'react'
+import React from 'react';
 import ProductCard from '../../../../components/ProductCard/ProductCard';
 import "./homeProducts.scss";
 import data from "../../../../data/data";
 const HomeProducts = () => {
     return (
         <div className="home-products page-container">
-            <h3 className='text-center'>Our Latest Products</h3>
+            <h3 className='text-center part-title'>Our Latest Products</h3>
             <div className="divider-part">
                 <div className="divider"></div>
             </div>
             <div className="row">
                 {data.slice(0, 4).map((item) => (
                     <ProductCard
+                        id={item.id}
                         image={item.image}
                         title={item.title}
                         category={item.category}
@@ -25,4 +26,4 @@ const HomeProducts = () => {
     )
 }
 
-export default HomeProducts
+export default HomeProducts;

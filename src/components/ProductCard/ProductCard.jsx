@@ -5,9 +5,9 @@ import { HiShoppingCart } from "react-icons/hi";
 import { FaEye } from "react-icons/fa";
 
 const ProductCard = (props) => {
-    const { image, title, category, price, newPrice, sale } = props;
+    const { image, title, category, price, newPrice, sale, id } = props;
     return (
-        <div className="product-card pb-5 d-flex flex-column col-12 col-md-4 col-lg-3">
+        <div key={id} className="product-card pb-5 d-flex flex-column col-12 col-md-4 col-lg-3">
             <div className="product-image mb-1">
                 <Link to="/"><img src={image} alt="product" /></Link>
             </div>
