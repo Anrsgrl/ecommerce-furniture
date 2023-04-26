@@ -1,19 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ProductCard from '../../../../components/ProductCard/ProductCard';
-import data from "../../../../data/data";
 import { FaFilter } from "react-icons/fa";
 import "./shopProducts.scss";
+import { useDispatch, useSelector } from 'react-redux';
+import { handleSortt } from '../../../../store/features/filterSlice';
 
 const ShopProducts = () => {
-    const [products, setProducts] = useState([...data]);
-    function handleSort(e) {
-        if (e.target.value === "Low") {
-            setProducts([...data.sort((a, b) => a.price > b.price ? 1 : -1)])
-        } else if (e.target.value === "High") {
-            setProducts([...data.sort((a, b) => a.price < b.price ? 1 : -1)])
-        } else {
-            setProducts([...data.sort((a, b) => a.id > b.id ? 1 : -1)])
-        }
+    const products = useSelector((state) => state.products.products)
+    const dispatch = useDispatch()
+    const handleSort = (e) => {
+        dispatch(handleSortt(e))
     }
     return (
         <div className="shop-products">
@@ -21,7 +17,7 @@ const ShopProducts = () => {
                 <button className="general-button">
                     <FaFilter /> <span className='ps-1'>FILTER</span>
                 </button>
-                <select name="sort-list" id="sort-list" onChange={(e) => { handleSort(e) }}>
+                <select name="sort-list" id="sort-list" onChange={(e) => { handleSort(e.target.value) }}>
                     <option value="">Default sorting</option>
                     <option value="Low">Sort by price: low to high</option>
                     <option value="High">Sort by price: high to low</option>
