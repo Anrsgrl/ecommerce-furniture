@@ -31,6 +31,7 @@ const ShopProducts = () => {
                 {products.map((item) => (
                     <ProductCard
                         key={item.id}
+                        item={item}
                         image={item.image}
                         title={item.title}
                         category={item.category}

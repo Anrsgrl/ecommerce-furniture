@@ -3,9 +3,14 @@ import { Link } from 'react-router-dom';
 import "./productCard.scss";
 import { HiShoppingCart } from "react-icons/hi";
 import { FaEye } from "react-icons/fa";
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from '../../store/features/cartSlice';
 
 const ProductCard = (props) => {
-    const { image, title, category, price, oldPrice } = props;
+    const { image, title, category, price, oldPrice, item } = props;
+    const dispatch = useDispatch();
+    const x = useSelector((state) => state.cart.cart);
+    console.log(x)
     return (
         <div className="product-card pb-5 d-flex flex-column col-12 col-md-4 col-lg-3">
             <div className="product-image mb-1">
@@ -19,7 +24,7 @@ const ProductCard = (props) => {
                 </div>
             </div>
             <div className="product-card-buttons d-flex flex-column">
-                <button className='add-cart'><HiShoppingCart /><span>Add to cart</span></button>
+                <button onClick={() => { dispatch(addToCart(item)) }} className='add-cart'><HiShoppingCart /><span>Add to cart</span></button>
                 <button className='quick-view'><FaEye /><span>Quick View</span></button>
             </div>
             {oldPrice && <span className="product-sale">Sale!</span>}

@@ -9,7 +9,6 @@ import { IoCloseSharp } from "react-icons/io5";
 const Header = () => {
     const [hamburger, setHamburger] = useState(true);
     const [nav, setNav] = useState(false);
-    console.log(nav)
     return (
         <header className='bg-white'>
             <div className="page-container">
