@@ -9,7 +9,7 @@ export const filterSlice = createSlice({
     name: "filter",
     initialState,
     reducers: {
-        handleSortt: (state, action) => {
+        handleSort: (state, action) => {
             if (action.payload === "Low") {
                 state.products = [...data.sort((a, b) => a.price > b.price ? 1 : -1)]
             } else if (action.payload === "High") {
@@ -18,9 +18,10 @@ export const filterSlice = createSlice({
                 state.products = [...data.sort((a, b) => a.id > b.id ? 1 : -1)]
             }
         },
+
     },
 });
 
 export const filterReducer = filterSlice.reducer;
-export const { handleSortt } =
+export const { handleSort } =
     filterSlice.actions;

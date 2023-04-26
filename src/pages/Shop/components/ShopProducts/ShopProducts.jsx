@@ -3,13 +3,13 @@ import ProductCard from '../../../../components/ProductCard/ProductCard';
 import { FaFilter } from "react-icons/fa";
 import "./shopProducts.scss";
 import { useDispatch, useSelector } from 'react-redux';
-import { handleSortt } from '../../../../store/features/filterSlice';
+import { handleSort } from '../../../../store/features/filterSlice';
 
 const ShopProducts = () => {
     const products = useSelector((state) => state.products.products)
     const dispatch = useDispatch()
-    const handleSort = (e) => {
-        dispatch(handleSortt(e))
+    const handleSorting = (e) => {
+        dispatch(handleSort(e))
     }
     return (
         <div className="shop-products">
@@ -17,7 +17,7 @@ const ShopProducts = () => {
                 <button className="general-button">
                     <FaFilter /> <span className='ps-1'>FILTER</span>
                 </button>
-                <select name="sort-list" id="sort-list" onChange={(e) => { handleSort(e.target.value) }}>
+                <select name="sort-list" id="sort-list" onChange={(e) => { handleSorting(e.target.value) }}>
                     <option value="">Default sorting</option>
                     <option value="Low">Sort by price: low to high</option>
                     <option value="High">Sort by price: high to low</option>
