@@ -5,10 +5,26 @@ import "./header.scss";
 import { HiShoppingCart } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
+import { useSelector } from 'react-redux';
 
 const Header = () => {
     const [hamburger, setHamburger] = useState(true);
     const [nav, setNav] = useState(false);
+    const cart = useSelector((state) => state.cart.cart);
+    const getTotalQuantity = () => {
+        let total = 0;
+        cart.forEach((item) => {
+            total += item.quantity;
+        });
+        return total;
+    };
+    const getTotalPrice = () => {
+        let total = 0;
+        cart.forEach((item) => {
+            total += Math.round(item.price) * item.quantity;
+        });
+        return total;
+    };
     return (
         <header className='bg-white'>
             <div className="page-container">
@@ -25,10 +41,10 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="header-right">
-                        <p className='price'>£0.00</p>
+                        <p className='price'>£{getTotalPrice()}.00</p>
                         <div className='cart'>
                             <HiShoppingCart />
-                            <p className='cart-quantity'>0</p>
+                            <p className='cart-quantity'>{getTotalQuantity()}</p>
                         </div>
                         <div className="hamburger-menu">
                             {hamburger ? (<button onClick={() => { setNav(true); setHamburger(false) }}><GiHamburgerMenu /></button>) : (<button onClick={() => { setNav(false); setHamburger(true) }}><IoCloseSharp /></button>)}
