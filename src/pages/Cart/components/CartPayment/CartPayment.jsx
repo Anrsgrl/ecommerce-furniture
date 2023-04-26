@@ -22,7 +22,7 @@ const CartPayment = () => {
         return total;
     };
     return (
-        <div classNameName="cart-payment">
+        <div className="cart-payment">
 
             <div className="container py-5 h-100">
                 <div className="row d-flex justify-content-center align-items-center h-100">
@@ -65,7 +65,7 @@ const CartPayment = () => {
                                             <div className="mb-5 cart-head">
                                                 <div className="form-outline">
                                                     <input type="text" id="form3Examplea2" className="form-control form-control-lg" />
-                                                    <label className="form-label" for="form3Examplea2">Enter your code</label>
+                                                    <label className="form-label" htmlFor="form3Examplea2">Enter your code</label>
                                                 </div>
                                             </div>
 
