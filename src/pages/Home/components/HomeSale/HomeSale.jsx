@@ -7,7 +7,7 @@ const HomeSale = () => {
             <div className="sale-content">
                 <div className="sale-title d-flex flex-column">
                     <h2>Sale!</h2>
-                    <h3>10% Off On All Products!</h3>
+                    <h3 className='text-center text-sm-start'>10% Off On All Products!</h3>
                     <button className='general-button'>Shop Now</button>
                 </div>
             </div>

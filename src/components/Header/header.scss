@@ -67,10 +67,13 @@ header {
                 }
             }
 
-            @media(max-width: 544px) {
-                img {
+            .logo-part {
+                @media(max-width: 544px) {
                     max-width: 150px;
-                    transition: all 500ms ease-in-out;
+                }
+
+                img {
+                    width: 100%;
                 }
             }
         }
