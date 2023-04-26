@@ -1,10 +1,10 @@
 import React from 'react';
-import HomeConnectItem from './HomeConnectItem';
-import "./homeConnect.scss";
+import HomeConnectItem from './ConnectItem';
+import "./connect.scss";
 import { AiFillFacebook, AiOutlineTwitter, AiOutlineGoogle, AiFillInstagram } from "react-icons/ai";
 import { FaPinterestP } from "react-icons/fa";
 
-const HomeConnect = () => {
+const Connect = () => {
     return (
         <div className="home-connect page-container">
             <h3>Connect with us!</h3>
@@ -19,4 +19,4 @@ const HomeConnect = () => {
     )
 }
 
-export default HomeConnect;
+export default Connect;

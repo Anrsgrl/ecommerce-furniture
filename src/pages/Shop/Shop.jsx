@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
+import Connect from "../../components/Connect/Connect";
+import Contact from "../../components/Contact/Contact";
+import ShopProducts from './components/ShopProducts/ShopProducts';
+
 
 const Shop = () => {
     return (
-        <div>Shop</div>
+        <div className="shop page-container">
+            <ShopProducts />
+            <Connect />
+            <Contact />
+        </div>
     )
 }
 
-export default Shop
+export default Shop;

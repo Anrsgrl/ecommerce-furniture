@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from "../../assets/images/logo.png";
 import "./header.scss";
 import { HiShoppingCart } from "react-icons/hi";
@@ -16,10 +16,10 @@ const Header = () => {
                 <div className="header-content">
                     <div className="header-left">
                         <div className="logo-part pe-4">
-                            <img src={logo} alt="logo" />
+                            <Link to="/"><img src={logo} alt="logo" /></Link>
                         </div>
                         <ul className='dekstop-nav list-unstyled m-0'>
-                            <li><NavLink>All products</NavLink></li>
+                            <li><NavLink to="/shop">All products</NavLink></li>
                             <li><NavLink>Sofa</NavLink></li>
                             <li><NavLink>Chair</NavLink></li>
                             <li><NavLink>Table</NavLink></li>
