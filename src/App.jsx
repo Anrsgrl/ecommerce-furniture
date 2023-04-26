@@ -7,6 +7,7 @@ import Shop from "./pages/Shop/Shop";
 import Cart from "./pages/Cart/Cart";
 import NotFound from "./pages/NotFound/NotFound";
 import 'bootstrap/dist/css/bootstrap.css';
+import Product from './pages/Product/Product';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/:id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

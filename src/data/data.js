@@ -1,4 +1,4 @@
-let data = [
+export const data = [
     {
         id: 1,
         category: 'Chair',
@@ -132,5 +132,3 @@ let data = [
         price: 169,
     }
 ]
-
-export default data;

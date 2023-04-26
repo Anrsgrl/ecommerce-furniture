@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from '../../../../components/ProductCard/ProductCard';
 import "./homeProducts.scss";
-import data from "../../../../data/data";
+import { data } from "../../../../data/data";
 const HomeProducts = () => {
     return (
         <div className="home-products page-container">
