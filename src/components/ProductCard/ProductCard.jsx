@@ -5,7 +5,7 @@ import { HiShoppingCart } from "react-icons/hi";
 import { FaEye } from "react-icons/fa";
 
 const ProductCard = (props) => {
-    const { image, title, category, price, oldPrice, sale } = props;
+    const { image, title, category, price, oldPrice } = props;
     return (
         <div className="product-card pb-5 d-flex flex-column col-12 col-md-4 col-lg-3">
             <div className="product-image mb-1">
@@ -15,14 +15,14 @@ const ProductCard = (props) => {
                 <span className='product-category'>{category}</span>
                 <h3><Link to="/">{title}</Link ></h3>
                 <div className="product-prices d-flex">
-                    {sale ? (<><del className='product-price pe-2'>£{oldPrice}.00</del><span className='product-price'>£{price}.00</span></>) : (<span className='product-price'>£{price}.00</span>)}
+                    {oldPrice ? (<><del className='product-price pe-2'>£{oldPrice}.00</del><span className='product-price'>£{price}.00</span></>) : (<span className='product-price'>£{price}.00</span>)}
                 </div>
             </div>
             <div className="product-card-buttons d-flex flex-column">
                 <button className='add-cart'><HiShoppingCart /><span>Add to cart</span></button>
                 <button className='quick-view'><FaEye /><span>Quick View</span></button>
             </div>
-            {sale && <span className="product-sale">Sale!</span>}
+            {oldPrice && <span className="product-sale">Sale!</span>}
         </div>
     )
 }

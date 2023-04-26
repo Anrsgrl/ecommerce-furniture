@@ -12,7 +12,7 @@ const Testimonials = () => {
             <div className="row g-0 px-2">
                 {testimonials.map((item) => (
                     <TestimonialsItem
-                        id={item.id}
+                        key={item.id}
                         name={item.user}
                         comment={item.comment}
                         image={item.image}

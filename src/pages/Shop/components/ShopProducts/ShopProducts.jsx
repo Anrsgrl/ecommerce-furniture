@@ -7,7 +7,6 @@ import "./shopProducts.scss";
 const ShopProducts = () => {
     const [products, setProducts] = useState([...data]);
     function handleSort(e) {
-
         if (e.target.value === "Low") {
             setProducts([...data.sort((a, b) => a.price > b.price ? 1 : -1)])
         } else if (e.target.value === "High") {
@@ -15,9 +14,7 @@ const ShopProducts = () => {
         } else {
             setProducts([...data.sort((a, b) => a.id > b.id ? 1 : -1)])
         }
-
     }
-
     return (
         <div className="shop-products">
             <div className="filter-part d-flex  justify-content-between py-5">
@@ -39,7 +36,6 @@ const ShopProducts = () => {
                         category={item.category}
                         price={item.price}
                         oldPrice={item.oldPrice}
-                        sale={item.sale}
                     />
                 ))}
             </div>
@@ -47,4 +43,4 @@ const ShopProducts = () => {
     )
 }
 
-export default ShopProducts
+export default ShopProducts;
