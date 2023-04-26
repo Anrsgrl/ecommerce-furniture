@@ -8,6 +8,8 @@ import Cart from "./pages/Cart/Cart";
 import NotFound from "./pages/NotFound/NotFound";
 import 'bootstrap/dist/css/bootstrap.css';
 import Product from './pages/Product/Product';
+import Connect from './components/Connect/Connect';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <Connect />
+      <Contact />
       <Footer />
     </>
   );

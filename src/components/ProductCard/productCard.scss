@@ -1,6 +1,37 @@
 @import "../../vendors/mixins";
 @import "../../vendors/variables";
 
+.product-info {
+    del {
+        opacity: 0.57;
+    }
+
+    .product-category {
+        font-size: .85em;
+        margin-bottom: 0.5em;
+        display: block;
+        line-height: 1.3;
+        opacity: .6;
+    }
+
+    h3 {
+        margin-bottom: 0.5em;
+        padding: 0;
+        font-size: 1em;
+
+        a {
+            text-decoration: none;
+            color: $main-color ;
+        }
+    }
+
+    .product-price {
+        line-height: 1.3;
+        font-weight: 700;
+        font-size: .9em;
+    }
+}
+
 .product-card {
     position: relative;
 
@@ -21,37 +52,6 @@
     &:hover .product-card-buttons {
         opacity: 1 !important;
         visibility: visible !important;
-    }
-
-    .product-info {
-        del {
-            opacity: 0.57;
-        }
-
-        .product-category {
-            font-size: .85em;
-            margin-bottom: 0.5em;
-            display: block;
-            line-height: 1.3;
-            opacity: .6;
-        }
-
-        h3 {
-            margin-bottom: 0.5em;
-            padding: 0;
-            font-size: 1em;
-
-            a {
-                text-decoration: none;
-                color: $main-color ;
-            }
-        }
-
-        .product-price {
-            line-height: 1.3;
-            font-weight: 700;
-            font-size: .9em;
-        }
     }
 
     .product-card-buttons {

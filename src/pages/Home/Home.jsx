@@ -5,8 +5,6 @@ import HomeSale from './components/HomeSale/HomeSale';
 import HomeServices from './components/HomeServices/HomeServices';
 import HomeProducts from './components/HomeProducts/HomeProducts';
 import Testimonials from './components/Testimonials/Testimonials';
-import HomeConnect from './components/HomeConnect/HomeConnect';
-import HomeContact from './components/HomeContact/HomeContact';
 
 const Home = () => {
     return (
@@ -17,8 +15,6 @@ const Home = () => {
             <HomeSale />
             <HomeProducts />
             <Testimonials />
-            <HomeConnect />
-            <HomeContact />
         </div>
     )
 }
