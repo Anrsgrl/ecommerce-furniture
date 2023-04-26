@@ -1,0 +1,26 @@
+@import "../../../../vendors/mixins";
+@import "../../../../vendors/variables";
+
+#sort-list {
+    border: 2px solid $main-color;
+    background-color: transparent;
+    color: $main-color;
+    outline: 0;
+    text-align: center;
+
+    &:hover {
+        background-color: $main-color;
+        color: white;
+    }
+
+    option {
+        background-color: white;
+        color: $main-color;
+        outline: 0;
+    }
+}
+
+.filter-part {
+    flex-wrap: wrap;
+    gap: 8px;
+}

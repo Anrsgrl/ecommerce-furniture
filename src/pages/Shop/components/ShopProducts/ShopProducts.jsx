@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ProductCard from '../../../../components/ProductCard/ProductCard';
 import data from "../../../../data/data";
 import { FaFilter } from "react-icons/fa";
+import "./shopProducts.scss";
 
 const ShopProducts = () => {
     const [products, setProducts] = useState([...data]);
