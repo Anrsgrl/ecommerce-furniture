@@ -12,13 +12,13 @@ const HomeProducts = () => {
             <div className="row">
                 {data.slice(0, 4).map((item) => (
                     <ProductCard
-                        id={item.id}
+                        key={item.id}
+                        item={item}
                         image={item.image}
                         title={item.title}
                         category={item.category}
                         price={item.price}
-                        newPrice={item.newPrice}
-                        sale={item.sale}
+                        oldPrice={item.oldPrice}
                     />
                 ))}
             </div>

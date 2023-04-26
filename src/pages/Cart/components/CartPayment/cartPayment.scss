@@ -1,0 +1,78 @@
+@import "../../../../vendors/mixins";
+@import "../../../../vendors/variables";
+
+.cart-trash {
+    @include cleanButton;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    color: #dddddd;
+
+    &:hover {
+        color: #3a3a3a;
+    }
+
+    svg {
+        @include imageCover;
+    }
+}
+
+.cart-head {
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 20px;
+}
+
+.cart-products {
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.quantity-button,
+.quantity {
+    background-color: white;
+    border: 1px solid #dddddd;
+    outline: 0;
+    padding: 3px 11px;
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+.bg-grey {
+    background-color: #efefef;
+}
+
+@media (min-width: 992px) {
+    .card-registration-2 .bg-grey {
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}
+
+@media (max-width: 991px) {
+    .card-registration-2 .bg-grey {
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}
+
+.back-shop {
+    a {
+        text-decoration: none;
+        color: $main-color;
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+}

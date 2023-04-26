@@ -43,7 +43,7 @@ const Header = () => {
                     <div className="header-right">
                         <p className='price'>£{getTotalPrice()}.00</p>
                         <div className='cart'>
-                            <HiShoppingCart />
+                            <Link to="/cart"><HiShoppingCart /></Link>
                             <p className='cart-quantity'>{getTotalQuantity()}</p>
                         </div>
                         <div className="hamburger-menu">
