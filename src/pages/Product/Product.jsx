@@ -22,17 +22,17 @@ const Product = () => {
                 <h6 className="mb-0"><Link to="/shop"><HiOutlineArrowNarrowLeft />Back to Shop</Link></h6>
             </div>
             <div className="row">
-                <div className="col-12 col-md-7 p-5">
+                <div data-aos="fade-up" className="col-12 col-md-7 p-5">
                     <img src={product?.image} alt="product" className='w-100' />
                 </div>
                 <div className="col-12 col-md-5 p-5 product-info">
-                    <h2>{product?.title}</h2>
-                    <span className='product-category'>{product?.category}</span>
-                    <p>{product?.content}</p>
-                    <div className="product-prices d-flex pb-2">
+                    <h2 data-aos="fade-left">{product?.title}</h2>
+                    <span data-aos="fade-left" className='product-category'>{product?.category}</span>
+                    <p data-aos="fade-left">{product?.content}</p>
+                    <div data-aos="fade-left" className="product-prices d-flex pb-2">
                         {product?.oldPrice ? (<><del className='product-price pe-2'>£{product?.oldPrice}.00</del><span className='product-price'>£{product?.price}.00</span></>) : (<span className='product-price'>£{product?.price}.00</span>)}
                     </div>
-                    <button className='general-button' onClick={() => dispatch(addToCart(product))}>Add to cart</button>
+                    <button data-aos="fade-left" className='general-button' onClick={() => dispatch(addToCart(product))}>Add to cart</button>
                 </div>
             </div>
         </div>
