@@ -5,8 +5,8 @@ import { data } from "../../../../data/data";
 const HomeProducts = () => {
     return (
         <div className="home-products page-container">
-            <h3 className='text-center part-title'>Our Latest Products</h3>
-            <div className="divider-part">
+            <h3 data-aos="fade-up" className='text-center part-title'>Our Latest Products</h3>
+            <div data-aos="fade-up" className="divider-part">
                 <div className="divider"></div>
             </div>
             <div className="row">

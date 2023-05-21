@@ -10,7 +10,7 @@ const ProductCard = (props) => {
     const { image, title, category, price, oldPrice, item } = props;
     const dispatch = useDispatch();
     return (
-        <div className="product-card pb-5 d-flex flex-column col-12 col-md-4 col-lg-3">
+        <div data-aos="fade-up" className="product-card pb-5 d-flex flex-column col-12 col-md-4 col-lg-3">
             <div className="product-image mb-1">
                 <Link to={`/shop/${item.id}`}><img src={image} alt="product" /></Link>
             </div>

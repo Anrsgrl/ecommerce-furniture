@@ -7,7 +7,7 @@ import { FaPinterestP } from "react-icons/fa";
 const Connect = () => {
     return (
         <div className="home-connect page-container">
-            <h3>Connect with us!</h3>
+            <h3 data-aos="fade-up">Connect with us!</h3>
             <div className="connections">
                 <HomeConnectItem logo={<AiFillFacebook />} />
                 <HomeConnectItem logo={<AiOutlineTwitter />} />
