@@ -29,6 +29,10 @@
             outline: 0;
             flex-wrap: wrap;
 
+            @media(max-width: 767px) {
+                padding: 10px;
+            }
+
             svg {
                 width: 20px;
                 height: 20px;
