@@ -4,9 +4,6 @@
 The Furniture E-commerce project is a specialized e-commerce platform designed for users looking to shop for furniture. It aims to make furniture shopping easy and enjoyable with a wide range of products, a user-friendly interface.
 
 
-## Authors
-
-- [Anrsgrl](https://www.github.com/Anrsgrl)
 
 
 ## Screenshots
@@ -47,3 +44,7 @@ Start the server
   npm start
 ```
 
+
+## Authors
+
+- [Anrsgrl](https://www.github.com/Anrsgrl)
