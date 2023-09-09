@@ -1,26 +1,50 @@
-<h1 align="center"> Furniture E-commerce  </h1>
 
-###
+# Furniture E-commerce
 
-<h2 align="left"> Used Technologies: </h1>
+The Furniture E-commerce project is a specialized e-commerce platform designed for users looking to shop for furniture. It aims to make furniture shopping easy and enjoyable with a wide range of products, a user-friendly interface.
 
-###
 
-<ul>
-  <li> Semantic HTML5 markup </li>
-  <li> Javascript </li>
-  <li> React </li>
-  <li> Bootstrap </li>
-  <li> Framer Motion </li>
-  <li> Redux toolkit </li>
-</ul>
+## Authors
 
-<h2 align="left"> Author: </h1>
+- [Anrsgrl](https://www.github.com/Anrsgrl)
 
-###
 
-<ul>
- <li>
-    <a href="https://github.com/Anrsgrl"> Anar Asgarli </a>
-  </li>
-</ul>
+## Screenshots
+
+![App Screenshot](./public/furniture-screenshot.png)
+
+
+## Tech Stack
+- **JavaScript:** The primary programming language.
+- **React:** Utilized for building the user interface.
+- **Redux toolkit:** Employed for state management.
+- **Bootstrap:** Styling and layout of components.
+- **Framer Motion:** Integrated for animations.
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Anrsgrl/ecommerce-furniture
+```
+
+Go to the project directory
+
+```bash
+  cd ecommerce-furniture
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm start
+```
+
