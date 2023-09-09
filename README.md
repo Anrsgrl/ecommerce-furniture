@@ -11,8 +11,7 @@ The Furniture E-commerce project is a specialized e-commerce platform designed f
 
 ## Screenshots
 
-![App Screenshot](./public/furniture-screenshot.png)
-
+[![App Screenshot](./public/furniture-screenshot.png)](https://ecommerce-furniture-anrsgrl.netlify.app/)
 
 ## Tech Stack
 - **JavaScript:** The primary programming language.
